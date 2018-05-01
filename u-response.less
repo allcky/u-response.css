@@ -1,0 +1,159 @@
+@import "u-var.less";
+.container{
+    // 固定宽度容器
+    &{
+        padding-left:@pad;
+        padding-right:@pad;
+        margin-left:auto;
+        margin-right: auto;
+        display: block; 
+    }
+    // 100%宽度容器
+    &-fluid{
+        width: 100%;
+        padding-left:@pad;
+        padding-right:@pad;
+        display: block;
+    }
+    &:before,&:after,&-fluid:before,&-fluid:after{
+        dipsplay:table;
+        line-height: 0;
+        content: '';
+    }
+    &:after,&-fluid:after{
+        clear: both;
+    }
+    // 容器 行
+    & .row,&-fluid .row{
+        display: block;
+        overflow: hidden;
+        margin-right: -@pad;
+        margin-left: -@pad;
+    }
+}
+// 图片响应式
+.img-responsive{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+/* 超小屏幕（手机，小于 768px） */
+@media screen and (max-width: 767px){
+    .hidden-xs{
+        display: none;
+    }
+}
+
+/* 小屏幕（平板，大于等于 768px） */
+@media screen and (min-width: 768px) and (max-width:991px){
+    .hidden-sm{
+        display: none;
+    }
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media screen and (min-width:992px) and (max-width: 1199px){
+    .hidden-md{
+        display: none;
+    }
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media screen and (min-width: 1200px){
+    .hidden-lg{
+        display: none;
+    }
+}
+
+.response(@type,@i:1) when(@i< (@cols+1)){
+    .col-@{type}-@{i}{
+        width:@i*100%/@cols;
+    }
+    .col-@{type}-offset-@{i}{
+        margin-left:@i*100%/@cols;
+    }
+    .col-@{type}-pull-@{i}{
+        right:@i*100%/@cols;
+    }
+    .col-@{type}-push-@{i}{
+        left:@i*100%/@cols;
+    }
+    .response(@type,@i+1);
+}
+[class*="col-"]{
+    float:left;
+    position:relative;
+    overflow:hidden;
+    padding-left:@colpad;
+    padding-right:@colpad;
+}
+/* 超小屏幕（手机，小于 768px） */
+.col-xs-offset-0{
+    margin-left: 0px;
+}
+.col-xs-pull-0{
+    right:0;
+}
+.col-xs-push-0{
+    left:0;
+}
+.response(xs);
+/*小屏幕 平板 (≥768px)*/
+@media screen and (min-width:768px){
+    img[data-md-src]{
+        content:attr(data-md-src,url);
+    }
+    .container{
+        width: @sm-width;
+    }
+    .col-sm-offset-0{
+        margin-left: 0px;
+    }
+    .col-sm-pull-0{
+        right:0;
+    }
+    .col-sm-push-0{
+        left:0;
+    }
+    .response(sm);
+}
+/*中等屏幕 桌面显示器 (≥992px)*/
+@media screen and (min-width:992px){
+    img[data-md-src]{
+        content:attr(data-md-src,url);
+    }
+    .container{
+        width: @md-width;
+    }
+    .col-md-offset-0{
+        margin-left: 0px;
+    }
+    .col-md-pull-0{
+        right:0;
+    }
+    .col-md-push-0{
+        left:0;
+    }
+    .response(md);
+}
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media screen and (min-width:1200px){
+    img[data-lg-src]{
+        content:attr(data-lg-src,url);
+    }
+    .container{
+        width: @lg-width;
+    }
+    .col-lg-offset-0{
+        margin-left: 0px;
+    }
+    .col-lg-pull-0{
+        right:0;
+    }
+    .col-lg-push-0{
+        left:0;
+    }
+    .response(lg);
+}
+
+

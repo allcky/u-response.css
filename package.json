@@ -1,0 +1,23 @@
+{
+  "name": "u-response.css",
+  "version": "1.0.0",
+  "description": "This is a responsive layout Library.",
+  "main": "u-response.css",
+  "scripts": {
+    "start": "lessc u-response.less u-response.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allcky/u-response.css.git"
+  },
+  "keywords": [
+    "response",
+    "响应式"
+  ],
+  "author": "hnz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allcky/u-response.css/issues"
+  },
+  "homepage": "https://github.com/allcky/u-response.css#readme"
+}
