@@ -1,6 +1,6 @@
 {
   "name": "u-response.css",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a responsive layout Library.",
   "main": "u-response.css",
   "scripts": {
@@ -14,6 +14,7 @@
     "response",
     "响应式",
     "响应式布局",
+    "12栅格化",
     "u-response.css",
     "response.css"
   ],

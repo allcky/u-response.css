@@ -9,7 +9,7 @@ This is a responsive layout Library.
 ```
 npm install --save u-response.css
 ```
-## 下周(Download)
+## 下载(Download)
 https://unpkg.com/u-response.css
 ## Less2Css
 ```
@@ -44,8 +44,6 @@ u-var.less       # 定义参数
 ### 栅格
 栅格用于通过一系列的行（row）与列（column）的组合来创建页面布局.
 
-### 类名
-
 类名 | 描述        
 ------|------------- 
 .col-xs-1 ~ .col-xs-12 | 手机设备(768 > screen )
@@ -56,6 +54,14 @@ u-var.less       # 定义参数
 .col-sm-offset-1 ~ .col-sm-offset-12 | 平板设备列偏移
 .col-md-offset-1 ~ .col-md-offset-12 | PC小屏列偏移
 .col-lg-offset-1 ~ .col-lg-offset-12 | PC大屏列偏移
+.col-xs-push-1 ~ .col-xs-push-12 | 手机设备列右偏移
+.col-sm-push-1 ~ .col-sm-push-12 | 平板设备列右偏移
+.col-md-push-1 ~ .col-md-push-12 | PC小屏列右偏移
+.col-lg-push-1 ~ .col-lg-push-12 | PC大屏列右偏移
+.col-xs-pull-1 ~ .col-xs-pull-12 | 手机设备列左偏移
+.col-sm-pull-1 ~ .col-sm-pull-12 | 平板设备列左偏移
+.col-md-pull-1 ~ .col-md-pull-12 | PC小屏列左偏移
+.col-lg-pull-1 ~ .col-lg-pull-12 | PC大屏列左偏移
 .hidden-xs | 手机设备隐藏指定列
 .hidden-sm | 平板设备隐藏指定列
 .hidden-md | PC小屏隐藏指定列
