@@ -1,8 +1,8 @@
 {
   "name": "u-response.css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "This is a responsive layout Library.",
-  "main": "u-response.css",
+  "main": "u-response.min.css",
   "scripts": {
     "start": "lessc u-response.less u-response.css"
   },

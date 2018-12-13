@@ -15,18 +15,15 @@
         padding-right:@pad;
         display: block;
     }
-    &:before,&:after,&-fluid:before,&-fluid:after{
-        dipsplay:table;
+    &:after,&-fluid:after{
+        display:table;
         line-height: 0;
         content: '';
-    }
-    &:after,&-fluid:after{
         clear: both;
     }
     // 容器 行
     & .row,&-fluid .row{
         display: block;
-        overflow: hidden;
         margin-right: -@pad;
         margin-left: -@pad;
     }
@@ -83,7 +80,7 @@
 [class*="col-"]{
     float:left;
     position:relative;
-    overflow:hidden;
+    box-sizing:border-box;
     padding-left:@colpad;
     padding-right:@colpad;
 }

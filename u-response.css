@@ -11,22 +11,16 @@
   padding-right: 15px;
   display: block;
 }
-.container:before,
 .container:after,
-.container-fluid:before,
 .container-fluid:after {
-  dipsplay: table;
+  display: table;
   line-height: 0;
   content: '';
-}
-.container:after,
-.container-fluid:after {
   clear: both;
 }
 .container .row,
 .container-fluid .row {
   display: block;
-  overflow: hidden;
   margin-right: -15px;
   margin-left: -15px;
 }
@@ -62,7 +56,7 @@
 [class*="col-"] {
   float: left;
   position: relative;
-  overflow: hidden;
+  box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
 }
